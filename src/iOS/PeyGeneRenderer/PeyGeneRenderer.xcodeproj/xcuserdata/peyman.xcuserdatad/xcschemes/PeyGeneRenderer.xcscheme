@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3FFF3BB1B37226800AE66A8"
-               BuildableName = "PeyGeneRunner.app"
-               BlueprintName = "PeyGeneRunner"
-               ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+               BlueprintIdentifier = "F3FFF41D1B37237400AE66A8"
+               BuildableName = "PeyGeneRenderer.framework"
+               BlueprintName = "PeyGeneRenderer"
+               ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3FFF3D41B37226800AE66A8"
-               BuildableName = "PeyGeneRunnerTests.xctest"
-               BlueprintName = "PeyGeneRunnerTests"
-               ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+               BlueprintIdentifier = "F3FFF4281B37237400AE66A8"
+               BuildableName = "PeyGeneRendererTests.xctest"
+               BlueprintName = "PeyGeneRendererTests"
+               ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3FFF3D41B37226800AE66A8"
-               BuildableName = "PeyGeneRunnerTests.xctest"
-               BlueprintName = "PeyGeneRunnerTests"
-               ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+               BlueprintIdentifier = "F3FFF4281B37237400AE66A8"
+               BuildableName = "PeyGeneRendererTests.xctest"
+               BlueprintName = "PeyGeneRendererTests"
+               ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3FFF3BB1B37226800AE66A8"
-            BuildableName = "PeyGeneRunner.app"
-            BlueprintName = "PeyGeneRunner"
-            ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+            BlueprintIdentifier = "F3FFF41D1B37237400AE66A8"
+            BuildableName = "PeyGeneRenderer.framework"
+            BlueprintName = "PeyGeneRenderer"
+            ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,16 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3FFF3BB1B37226800AE66A8"
-            BuildableName = "PeyGeneRunner.app"
-            BlueprintName = "PeyGeneRunner"
-            ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+            BlueprintIdentifier = "F3FFF41D1B37237400AE66A8"
+            BuildableName = "PeyGeneRenderer.framework"
+            BlueprintName = "PeyGeneRenderer"
+            ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3FFF3BB1B37226800AE66A8"
-            BuildableName = "PeyGeneRunner.app"
-            BlueprintName = "PeyGeneRunner"
-            ReferencedContainer = "container:PeyGeneRunner.xcodeproj">
+            BlueprintIdentifier = "F3FFF41D1B37237400AE66A8"
+            BuildableName = "PeyGeneRenderer.framework"
+            BlueprintName = "PeyGeneRenderer"
+            ReferencedContainer = "container:PeyGeneRenderer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
