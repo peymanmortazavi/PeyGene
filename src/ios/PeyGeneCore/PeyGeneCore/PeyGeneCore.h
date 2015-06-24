@@ -17,3 +17,8 @@ FOUNDATION_EXPORT const unsigned char PeyGeneCoreVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <PeyGeneCore/PublicHeader.h>
 
 
+#import <PeyGeneCore/PGJavaScriptInterpreter.h>
+#import <PeyGeneCore/EnvironmentInfo.h>
+#import <PeyGeneCore/LayoutEngineInfo.h>
+#import <PeyGeneCore/PGView.h>
+#import <PeyGeneCore/PGFrame.h>
