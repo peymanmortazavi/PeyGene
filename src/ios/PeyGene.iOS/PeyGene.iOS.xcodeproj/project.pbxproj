@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F3B836091B3A303600C6804F /* PeyGene.iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B836081B3A303600C6804F /* PeyGene.iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3B8360F1B3A303600C6804F /* PeyGene.iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B836031B3A303600C6804F /* PeyGene.iOS.framework */; };
-		F3B836161B3A303600C6804F /* PeyGene_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B836151B3A303600C6804F /* PeyGene_iOSTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +26,6 @@
 		F3B836071B3A303600C6804F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B836081B3A303600C6804F /* PeyGene.iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeyGene.iOS.h; sourceTree = "<group>"; };
 		F3B8360E1B3A303600C6804F /* PeyGene.iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeyGene.iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B836141B3A303600C6804F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3B836151B3A303600C6804F /* PeyGene_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeyGene_iOSTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				F3B836051B3A303600C6804F /* PeyGene.iOS */,
-				F3B836121B3A303600C6804F /* PeyGene.iOSTests */,
 				F3B836041B3A303600C6804F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,23 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				F3B836071B3A303600C6804F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F3B836121B3A303600C6804F /* PeyGene.iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3B836151B3A303600C6804F /* PeyGene_iOSTests.m */,
-				F3B836131B3A303600C6804F /* Supporting Files */,
-			);
-			path = PeyGene.iOSTests;
-			sourceTree = "<group>";
-		};
-		F3B836131B3A303600C6804F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F3B836141B3A303600C6804F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,7 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B836161B3A303600C6804F /* PeyGene_iOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

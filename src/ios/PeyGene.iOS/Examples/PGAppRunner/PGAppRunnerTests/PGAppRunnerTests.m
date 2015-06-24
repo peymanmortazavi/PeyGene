@@ -1,6 +1,6 @@
 //
-//  PeyGene_iOSTests.m
-//  PeyGene.iOSTests
+//  PGAppRunnerTests.m
+//  PGAppRunnerTests
 //
 //  Created by Peyman Mortazavi on 6/23/15.
 //  Copyright (c) 2015 Peyman Mortazavi. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface PeyGene_iOSTests : XCTestCase
+@interface PGAppRunnerTests : XCTestCase
 
 @end
 
-@implementation PeyGene_iOSTests
+@implementation PGAppRunnerTests
 
 - (void)setUp {
     [super setUp];

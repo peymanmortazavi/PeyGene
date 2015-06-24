@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Examples">
+      <FileRef
+         location = "group:../Examples/PGAppRunner/PGAppRunner.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "self:PeyGene.iOS.xcodeproj">
    </FileRef>
