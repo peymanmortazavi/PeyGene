@@ -5,8 +5,13 @@
 
 #import "PGSize.h"
 
+@implementation PGSize
 
-@implementation PGSize {
-
++(instancetype)create{
+    return [[PGSize alloc]init];
 }
+
+@synthesize width;
+@synthesize height;
+
 @end

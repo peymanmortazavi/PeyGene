@@ -22,3 +22,4 @@ FOUNDATION_EXPORT const unsigned char PeyGeneCoreVersionString[];
 #import <PeyGeneCore/LayoutEngineInfo.h>
 #import <PeyGeneCore/PGView.h>
 #import <PeyGeneCore/PGFrame.h>
+#import <PeyGeneCore/PGPage.h>

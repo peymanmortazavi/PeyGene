@@ -6,7 +6,21 @@
 #import "PGView.h"
 
 
-@implementation PGView {
+@implementation PGView
 
+@synthesize frame;
+@synthesize backgroundColor;
+
++(instancetype)create {
+    return [[PGView alloc] init];
 }
+
+-(instancetype)init {
+    
+    if(self = [super init]) {
+        
+    }
+    return self;
+}
+
 @end

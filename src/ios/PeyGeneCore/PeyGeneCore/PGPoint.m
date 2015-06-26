@@ -4,10 +4,14 @@
 //
 
 #import "PGPoint.h"
-#import "PGSize.h"
 
+@implementation PGPoint
 
-@implementation PGPoint {
-
++(instancetype)create{
+    return [[PGPoint alloc]init];
 }
+
+@synthesize x;
+@synthesize y;
+
 @end

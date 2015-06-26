@@ -4,7 +4,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+
+@protocol PGPointExporting <NSObject, JSExport>
+
+@property (nonatomic) float x;
+
+@property (nonatomic) float y;
+
++(instancetype)create;
+
+@end
 
 
-@interface PGPoint : NSObject
+@interface PGPoint : NSObject<PGPointExporting>
+
+
 @end

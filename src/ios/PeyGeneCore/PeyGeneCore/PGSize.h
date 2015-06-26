@@ -4,7 +4,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+
+@protocol PGSizeExporting <NSObject, JSExport>
+
+@property (nonatomic) float width;
+
+@property (nonatomic) float height;
+
++(instancetype)create;
+
+@end
 
 
-@interface PGSize : NSObject
+@interface PGSize : NSObject<PGSizeExporting>
+
 @end

@@ -8,6 +8,7 @@
 
 #import "PGJavaScriptInterpreter.h"
 #import "PGFrame.h"
+#import "PGPage.h"
 
 @implementation PGJavaScriptInterpreter
 
@@ -29,12 +30,17 @@
     }
 
     return self;
+    
 }
 
 -(void)setup {
 
     // Register core classes.
-    self.mainContext[@"PGView"] = [PGFrame class];
+    self.mainContext[@"PGFrame"] = [PGFrame class];
+    self.mainContext[@"PGPoint"] = [PGPoint class];
+    self.mainContext[@"PGSize"] = [PGSize class];
+    self.mainContext[@"PGPage"] = [PGPage class];
+    self.mainContext[@"PGColor"] = [PGColor class];
 
     // Register common functions.
     self.mainContext[@"console"] = [[NSMutableDictionary alloc]initWithCapacity:1];
@@ -43,7 +49,6 @@
     };
 
     // Execute setup.js
-    NSBundle* bundle = [NSBundle bundleForClass:[PGJavaScriptInterpreter class]];
     NSURL* url =[[NSBundle bundleForClass:[PGJavaScriptInterpreter class]] URLForResource:@"setup" withExtension:@"js"];
     [self.mainContext evaluateScript:[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil]];
 }

@@ -4,8 +4,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PGViewExporting.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "PGFrame.h"
+#import "PGColor.h"
+
+@protocol PGViewExporting <NSObject, JSExport>
+
+@property (nonatomic) PGFrame* frame;
+@property (nonatomic) PGColor* backgroundColor;
+
++(instancetype)create;
+
+@end
 
 
 @interface PGView : NSObject<PGViewExporting>
+
 @end
