@@ -25,4 +25,6 @@
 
 @interface PGFrame : NSObject<PGFrameExporting>
 
+-(CGRect)toNativeFrame;
+
 @end

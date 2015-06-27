@@ -15,7 +15,7 @@ PGViewRenderer* viewRenderer;
 @synthesize viewModel;
 
 +(instancetype)create {
-    return [PGPage new];
+    return [[PGPage alloc] init];
 }
 
 -(instancetype)init {

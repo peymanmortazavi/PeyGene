@@ -67,4 +67,8 @@
     self.size.height = height;
 }
 
+-(CGRect)toNativeFrame {
+    return CGRectMake(self.x, self.y, self.width, self.height);
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import <PeyGeneCore/PeyGeneCore.h>
 #import "PGViewRenderer.h"
+#import <UIKit/UIKit.h>
 
 @implementation PGViewRenderer
 
@@ -15,22 +16,19 @@
     if(self = [super init]){
         self.nativeView = [[UIView alloc] init];
         self.viewModel = pgView;
-        
-        [self addObserver:self forKeyPath:@"viewModel.frame" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"viewModel.backgroundColor" options:NSKeyValueObservingOptionNew context:nil];
+        [self.viewModel addTarget:self selector:@selector(propertyChanged:)];
     }
     return self;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if([keyPath isEqualToString:@"viewModel.backgroundColor"]) {
+-(void)propertyChanged:(NSString*)key {
+    
+    if([key isEqualToString:@"frame"]) {
+        self.nativeView.frame = [self.viewModel.frame toNativeFrame];
+    }
+    if([key isEqualToString:@"backgroundColor"]) {
         self.nativeView.backgroundColor = [self.viewModel.backgroundColor toNativeColor];
     }
-}
-
--(void)dealloc{
-    [self removeObserver:self forKeyPath:@"viewModel.frame"];
-    [self removeObserver:self forKeyPath:@"viewModel.backgroundColor"];
 }
 
 @end

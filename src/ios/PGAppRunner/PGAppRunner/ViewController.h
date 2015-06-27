@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PeyGeneCore/PeyGeneCore.h>
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) PGFrame* dummy;
+@property (nonatomic) int dummy2;
 
 @end
 

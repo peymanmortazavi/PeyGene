@@ -32,7 +32,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
+    [self addObserver:self forKeyPath:@"dummy" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld|NSKeyValueObservingOptionInitial context:nil];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -45,14 +46,32 @@
     
     runtime.mainContext[@"app"] = self;
     
-    [runtime.mainContext[@"done"] callWithArguments:nil];
-    
     runtime.mainContext[@"present"] = ^(PGPage* page) {
         [self presentViewController:page animated:YES completion:nil];
     };
+    [runtime.mainContext[@"done"] callWithArguments:nil];
+//    
+//    self.dummy = [PGFrame createWithX:10 y:20 width:30 height:40];
+//    [self.dummy addObserver:self forKeyPath:@"location" options:NSKeyValueObservingOptionNew context:nil];
+//    
+//    self.dummy.x = 52;
+//    self.dummy2 = 1;
+//    
+//    [self.dummy removeObserver:self forKeyPath:@"location"];
+////    [runtime.mainContext[@"done"] callWithArguments:nil];
     
-//    [runtime.mainContext[@"done"] callWithArguments:nil];
-    
+}
+
++(BOOL)automaticallyNotifiesObserversOfDummy{
+    return [NSSet setWithObjects:@"dummy.width", @"dummy.size", @"dummy2", nil];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(keyPath);
+}
+
+-(void)dealloc {
+    [self removeObserver:self forKeyPath:@"dummy"];
 }
 
 - (void)didReceiveMemoryWarning {

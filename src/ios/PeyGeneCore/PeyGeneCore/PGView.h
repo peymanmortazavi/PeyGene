@@ -20,4 +20,7 @@
 
 @interface PGView : NSObject<PGViewExporting>
 
+// TODO: it's not descriptive. what event is this?
+-(void)addTarget:(id)target selector:(SEL)selector;
+
 @end

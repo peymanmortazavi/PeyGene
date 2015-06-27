@@ -11,25 +11,28 @@ PGFrame.create = function (x, y, width, height) {
     return frame;
 };
 
-try
-{
-    
-
-    var done = function() {
-        
+ var done = function() {
+     
+     try
+     {
+         
+         
+         
         var page = PGPage.create();
         
-        var color = PGColor.fromRGBA(128, 0, 0, 255);
-        console.log("a");
+        console.log("pg page created");
+        console.log(page.viewModel);
+        console.log(page.viewModel.backgroundColor);
         
-        page.view.backgroundColor = PGColor.fromRGBA(128, 0, 0, 255);
+        page.viewModel.backgroundColor = PGColor.fromRGBA(128, 0, 0, 255);
+        
+        console.log(page.viewModel.backgroundColor);
         
         present(page);
+     }
+     catch(ex){
+         console.log("Exception: " + ex);
+     }
         
     };
     
-
-}
-catch(ex){
-    console.log("Exception: " + ex);
-}

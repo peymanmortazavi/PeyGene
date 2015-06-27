@@ -41,6 +41,7 @@
     self.mainContext[@"PGSize"] = [PGSize class];
     self.mainContext[@"PGPage"] = [PGPage class];
     self.mainContext[@"PGColor"] = [PGColor class];
+    self.mainContext[@"PGView"] = [PGColor class];
 
     // Register common functions.
     self.mainContext[@"console"] = [[NSMutableDictionary alloc]initWithCapacity:1];
