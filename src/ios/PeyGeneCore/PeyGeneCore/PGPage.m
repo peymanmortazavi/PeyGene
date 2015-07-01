@@ -12,7 +12,7 @@
 
 PGViewRenderer* viewRenderer;
 
-@synthesize viewModel;
+@synthesize rootView;
 
 +(instancetype)create {
     return [[PGPage alloc] init];
@@ -20,8 +20,8 @@ PGViewRenderer* viewRenderer;
 
 -(instancetype)init {
     if(self = [super init]) {
-        self.viewModel = [PGView new];
-        viewRenderer = [[PGViewRenderer alloc] initWithModel:self.viewModel];
+        self.rootView = [PGView new];
+        viewRenderer = [[PGViewRenderer alloc] initWithModel:self.rootView];
     }
     return self;
 }

@@ -7,20 +7,26 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "PGFrame.h"
 #import "PGColor.h"
+#import "PGViewRenderer.h"
+#import "PGDefines.h"
+#import "PGControlTargetActionPair.h"
+
+@class PGView;
 
 @protocol PGViewExporting <NSObject, JSExport>
 
 @property (nonatomic) PGFrame* frame;
 @property (nonatomic) PGColor* backgroundColor;
+@property (nonatomic) NSMutableSet* subviews;
 
 +(instancetype)create;
 
-@end
+-(void)addSubview:(PGView*)view;
 
+@end
 
 @interface PGView : NSObject<PGViewExporting>
 
-// TODO: it's not descriptive. what event is this?
--(void)addTarget:(id)target selector:(SEL)selector;
+-(void)addTarget:(id)target selector:(SEL)selector forControlEvents:(PGControlEvents)event;
 
 @end

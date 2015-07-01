@@ -14,7 +14,7 @@
 
 @protocol PGPageExporting <NSObject, JSExport>
 
-@property (nonatomic) PGView* viewModel;
+@property (nonatomic) PGView* rootView;
 
 +(instancetype)create;
 

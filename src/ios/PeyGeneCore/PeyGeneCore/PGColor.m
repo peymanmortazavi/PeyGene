@@ -34,7 +34,7 @@
 }
 
 -(UIColor*)toNativeColor {
-    return [UIColor colorWithRed:self.red green:self.green blue:self.blue alpha:self.alpha];
+    return [UIColor colorWithRed:self.red/255.0f green:self.green/255.0f blue:self.blue/255.0f alpha:self.alpha/255.0f];
 }
 
 @end

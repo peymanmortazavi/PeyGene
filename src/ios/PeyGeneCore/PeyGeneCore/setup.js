@@ -16,17 +16,15 @@ PGFrame.create = function (x, y, width, height) {
      try
      {
          
-         
-         
         var page = PGPage.create();
+         
+        var view = PGView.create();
+         view.frame = PGFrame.create(45, 45, 50, 50);
+         
+        page.rootView.backgroundColor = PGColor.fromRGBA(0.5, 255, 0, 255);
+        page.rootView.addSubview(view);
         
-        console.log("pg page created");
-        console.log(page.viewModel);
-        console.log(page.viewModel.backgroundColor);
-        
-        page.viewModel.backgroundColor = PGColor.fromRGBA(128, 0, 0, 255);
-        
-        console.log(page.viewModel.backgroundColor);
+        console.log(page.rootView.backgroundColor);
         
         present(page);
      }

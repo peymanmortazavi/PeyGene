@@ -33,6 +33,9 @@
 		F3D5EA841B3CDAB200B6D2AF /* PGPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D5EA821B3CDAB200B6D2AF /* PGPage.m */; };
 		F3D5EA871B3CF1C100B6D2AF /* PGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D5EA851B3CF1C100B6D2AF /* PGColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3D5EA881B3CF1C100B6D2AF /* PGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D5EA861B3CF1C100B6D2AF /* PGColor.m */; };
+		F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E80B1C1B4448AE009B4A33 /* PGDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E80B201B444E15009B4A33 /* PGControlTargetActionPair.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E80B211B444E15009B4A33 /* PGControlTargetActionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		F3D5EA821B3CDAB200B6D2AF /* PGPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPage.m; sourceTree = "<group>"; };
 		F3D5EA851B3CF1C100B6D2AF /* PGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGColor.h; sourceTree = "<group>"; };
 		F3D5EA861B3CF1C100B6D2AF /* PGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGColor.m; sourceTree = "<group>"; };
+		F3E80B1C1B4448AE009B4A33 /* PGDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDefines.h; sourceTree = "<group>"; };
+		F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGControlTargetActionPair.h; sourceTree = "<group>"; };
+		F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGControlTargetActionPair.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 				C4E6B35F6157E56124FFA039 /* PGFrame.h */,
 				F3D5EA851B3CF1C100B6D2AF /* PGColor.h */,
 				F3D5EA861B3CF1C100B6D2AF /* PGColor.m */,
+				F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */,
+				F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 				C4E6B390094994E8800EA86B /* EnvironmentInfo.m */,
 				C4E6B45B99E1F1AC014DD4CE /* PGLogging.h */,
 				C4E6B2048483BEBB38CBA674 /* LayoutEngineInfo.h */,
+				F3E80B1C1B4448AE009B4A33 /* PGDefines.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -237,6 +246,8 @@
 				C4E6B8004671EDFA69BC5B44 /* PGPoint.h in Headers */,
 				C4E6B45165C5B08851EF1D66 /* PGSize.h in Headers */,
 				F3D5EA871B3CF1C100B6D2AF /* PGColor.h in Headers */,
+				F3E80B201B444E15009B4A33 /* PGControlTargetActionPair.h in Headers */,
+				F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */,
 				F3D5EA7E1B3CBB1300B6D2AF /* PGViewRenderer.h in Headers */,
 				C4E6B309578C24FF8EA089A5 /* LayoutEngineInfo.h in Headers */,
 			);
@@ -342,6 +353,7 @@
 				C4E6B78F0C996C92BF12A313 /* PGView.m in Sources */,
 				F3D5EA841B3CDAB200B6D2AF /* PGPage.m in Sources */,
 				C4E6B9099F61D91A2B8D3C1A /* PGPoint.m in Sources */,
+				F3E80B211B444E15009B4A33 /* PGControlTargetActionPair.m in Sources */,
 				C4E6BAAD83C7C3771B5FDB47 /* PGSize.m in Sources */,
 				F3D5EA881B3CF1C100B6D2AF /* PGColor.m in Sources */,
 				C4E6B2ED68ED1C8298034658 /* PGFrame.m in Sources */,
