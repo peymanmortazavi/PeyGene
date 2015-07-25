@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F36A01D51B3A4F4B00448D1F /* PeyGeneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F379F5B41B3A47C300321259 /* PeyGeneCore.framework */; };
-		F36A01D61B3A4F4B00448D1F /* PeyGeneCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F379F5B41B3A47C300321259 /* PeyGeneCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F379F5911B3A47B700321259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F379F5901B3A47B700321259 /* main.m */; };
 		F379F5941B3A47B700321259 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F379F5931B3A47B700321259 /* AppDelegate.m */; };
 		F379F5971B3A47B700321259 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F379F5961B3A47B700321259 /* ViewController.m */; };
@@ -16,6 +14,8 @@
 		F379F59C1B3A47B700321259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F379F59B1B3A47B700321259 /* Images.xcassets */; };
 		F379F59F1B3A47B700321259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F379F59D1B3A47B700321259 /* LaunchScreen.xib */; };
 		F379F5AB1B3A47B800321259 /* PGAppRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F379F5AA1B3A47B800321259 /* PGAppRunnerTests.m */; };
+		F3C945501B4713C3001AAFFA /* PeyGeneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */; };
+		F3C945511B4713C3001AAFFA /* PeyGeneCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F36A01D71B3A4F4B00448D1F /* Embed Frameworks */ = {
+		F3C945521B4713C4001AAFFA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F36A01D61B3A4F4B00448D1F /* PeyGeneCore.framework in Embed Frameworks */,
+				F3C945511B4713C3001AAFFA /* PeyGeneCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,7 @@
 		F379F5A41B3A47B800321259 /* PGAppRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGAppRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F379F5A91B3A47B800321259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F379F5AA1B3A47B800321259 /* PGAppRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAppRunnerTests.m; sourceTree = "<group>"; };
-		F379F5B41B3A47C300321259 /* PeyGeneCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeyGeneCore.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/PeyGene-eicvhkynwsqcfheblvfudrmzfufw/Build/Products/Debug-iphoneos/PeyGeneCore.framework"; sourceTree = "<group>"; };
+		F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = PeyGeneCore.framework; path = "/Users/peyman/Library/Developer/Xcode/DerivedData/PeyGene-eicvhkynwsqcfheblvfudrmzfufw/Build/Products/Debug-iphoneos/PeyGeneCore.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36A01D51B3A4F4B00448D1F /* PeyGeneCore.framework in Frameworks */,
+				F3C945501B4713C3001AAFFA /* PeyGeneCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 		F379F5821B3A47B700321259 = {
 			isa = PBXGroup;
 			children = (
-				F379F5B41B3A47C300321259 /* PeyGeneCore.framework */,
+				F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */,
 				F379F58D1B3A47B700321259 /* PGAppRunner */,
 				F379F5A71B3A47B800321259 /* PGAppRunnerTests */,
 				F379F58C1B3A47B700321259 /* Products */,
@@ -148,7 +148,7 @@
 				F379F5871B3A47B700321259 /* Sources */,
 				F379F5881B3A47B700321259 /* Frameworks */,
 				F379F5891B3A47B700321259 /* Resources */,
-				F36A01D71B3A4F4B00448D1F /* Embed Frameworks */,
+				F3C945521B4713C4001AAFFA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,6 +372,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PeyGene-eicvhkynwsqcfheblvfudrmzfufw/Build/Products/Debug-iphoneos",
+					"/Users/peyman/Projects/PeyGene/src/ios/PeyGeneCore/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PGAppRunner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -387,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PeyGene-eicvhkynwsqcfheblvfudrmzfufw/Build/Products/Debug-iphoneos",
+					"/Users/peyman/Projects/PeyGene/src/ios/PeyGeneCore/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PGAppRunner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

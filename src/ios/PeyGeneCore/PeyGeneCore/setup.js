@@ -33,4 +33,3 @@ PGFrame.create = function (x, y, width, height) {
      }
         
     };
-    
