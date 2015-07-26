@@ -6,9 +6,8 @@
 //  Copyright (c) 2015 Peyman Mortazavi. All rights reserved.
 //
 
-#import "PGJavaScriptInterpreter.h"
-#import "PGFrame.h"
-#import "PGPage.h"
+#import <PeyGeneCore/PeyGeneCore.h>
+#import "PGColor.h"
 
 @implementation PGJavaScriptInterpreter
 
@@ -36,10 +35,10 @@
 -(void)setup {
 
     // Register core classes.
-    self.mainContext[@"PGFrame"] = [PGFrame class];
-    self.mainContext[@"PGPoint"] = [PGPoint class];
-    self.mainContext[@"PGSize"] = [PGSize class];
-    self.mainContext[@"PGPage"] = [PGPage class];
+//    self.mainContext[@"PGFrame"] = [PGFrame class];
+//    self.mainContext[@"PGPoint"] = [PGPoint class];
+//    self.mainContext[@"PGSize"] = [PGSize class];
+//    self.mainContext[@"PGPage"] = [PGPage class];
     self.mainContext[@"PGColor"] = [PGColor class];
     self.mainContext[@"PGView"] = [PGView class];
 
