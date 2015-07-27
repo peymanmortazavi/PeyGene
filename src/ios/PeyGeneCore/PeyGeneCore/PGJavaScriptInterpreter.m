@@ -9,6 +9,7 @@
 #import <PeyGeneCore/PeyGeneCore.h>
 #import "PGColor.h"
 #import "PGSize.h"
+#import "PGButton.h"
 
 @implementation PGJavaScriptInterpreter
 
@@ -37,10 +38,11 @@
 
     // Register core classes.
     self.mainContext[@"PGColor"] = [PGColor class];
-    self.mainContext[@"PGView"] = [PGView class];
     self.mainContext[@"PGSize"] = [PGSize class];
     self.mainContext[@"PGPoint"] = [PGPoint class];
     self.mainContext[@"PGFrame"] = [PGFrame class];
+    self.mainContext[@"PGView"] = [PGView class];
+    self.mainContext[@"PGButton"] = [PGButton class];
 
     // Register common functions.
     self.mainContext[@"console"] = [[NSMutableDictionary alloc]initWithCapacity:1];

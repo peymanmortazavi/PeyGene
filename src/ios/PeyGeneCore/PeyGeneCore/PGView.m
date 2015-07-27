@@ -6,49 +6,56 @@
 #import <PeyGeneCore/PeyGeneCore.h>
 #import "PGView.h"
 
-//@interface PGView()
-
-//@property NSMutableDictionary* eventTargets;
-
-//@end
 
 @implementation PGView
 
-@synthesize backgroundColor;
-@synthesize layoutParameters;
-
 +(instancetype)create {
-    return [[PGView alloc] init];
+    return [[PGView alloc] initWithNativeView:[[UIView alloc] init]];
 }
 
--(instancetype)init {
+UIView* _nativeView;
+-(UIView*)nativeView {
+    return _nativeView;
+}
+-(void)setNativeView:(UIView *)nativeView {
+    _nativeView = nativeView;
+    [self syncNativeView];
+}
 
-    if(self = [super init]) {
-        
-        [self addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"layoutParameters" options:NSKeyValueObservingOptionNew context:nil];
+PGColor* _backgroundColor;
+-(PGColor*)backgroundColor {
+    return _backgroundColor;
+}
+-(void)setBackgroundColor:(PGColor *)backgroundColor {
+    _backgroundColor = backgroundColor;
+    self.nativeView.backgroundColor = [backgroundColor toNativeColor];
+}
 
-        self.backgroundColor = [PGColor fromNativeColor:super.backgroundColor];
-        self.layoutParameters = [PGFrame fromNativeFrame:super.frame];
+PGFrame* _layoutParameters;
+-(PGFrame *)layoutParameters {
+    return _layoutParameters;
+}
+-(void)setLayoutParameters:(PGFrame *)layoutParameters {
+    _layoutParameters = layoutParameters;
+    self.nativeView.frame = [layoutParameters toNativeFrame];
+}
+
+-(instancetype)initWithNativeView:(UIView *)view {
+    if(self = [self init]) {
+        self.nativeView = view;
+        self.backgroundColor = [PGColor fromNativeColor:self.nativeView.backgroundColor];
+        self.layoutParameters = [PGFrame fromNativeFrame:self.nativeView.frame];
     }
     return self;
 }
 
+-(void)syncNativeView {
+    self.nativeView.backgroundColor = [self.backgroundColor toNativeColor];
+    self.nativeView.frame = [self.layoutParameters toNativeFrame];
+}
+
 -(void)addSubview:(PGView *)view {
-    [super addSubview:view];
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if([keyPath isEqualToString:@"backgroundColor"]) {
-        super.backgroundColor = [self.backgroundColor toNativeColor];
-    } else if ([keyPath isEqualToString:@"layoutParameters"]) {
-        super.frame = [self.layoutParameters toNativeFrame];
-    }
-}
-
--(void)dealloc {
-    [self removeObserver:self forKeyPath:@"backgroundColor"];
-    [self removeObserver:self forKeyPath:@"layoutParameters"];
+    [self.nativeView addSubview:view.nativeView];
 }
 
 @end

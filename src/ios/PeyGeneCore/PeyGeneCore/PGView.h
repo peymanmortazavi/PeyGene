@@ -24,4 +24,8 @@
 
 @interface PGView : UIView<PGViewExporting>
 
+@property (nonatomic) UIView* nativeView;
+
+-(instancetype)initWithNativeView:(UIView*)view;
+
 @end

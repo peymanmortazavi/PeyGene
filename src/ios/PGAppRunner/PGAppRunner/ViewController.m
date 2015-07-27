@@ -46,7 +46,8 @@
     runtime.mainContext[@"app"] = self;
     
     runtime.mainContext[@"loadView"] = ^(PGView* view) {
-        [self.view addSubview:view];
+        NSLog([view.nativeView description]);
+        [self.view addSubview:view.nativeView];
     };
     [runtime.mainContext[@"done"] callWithArguments:nil];
     
