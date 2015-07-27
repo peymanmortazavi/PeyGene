@@ -6,15 +6,20 @@
 #import <UIKit/UIKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "PGColor.h"
+#import "PGFrame.h"
+
+@class PGView;
 
 @protocol PGViewExporting <NSObject, JSExport>
 
-+(instancetype)new;
++(instancetype)create;
 
 @property (nonatomic) PGColor* backgroundColor;
+@property (nonatomic) PGFrame* layoutParameters;
+
+-(void)addSubview:(PGView*)view;
 
 @end
-
 
 
 @interface PGView : UIView<PGViewExporting>

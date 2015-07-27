@@ -37,28 +37,18 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    LayoutEngineInfo* layoutEngineInfo = [LayoutEngineInfo withVersionName:@"Alpha Peyman" version:@0.1];
+    LayoutEngineInfo* layoutEngineInfo = [LayoutEngineInfo withVersionName:@"Alpha" version:@0.001];
     
-    EnvironmentInfo* environmentInfo = [EnvironmentInfo withLayoutEngineInfo:layoutEngineInfo operatingSystemName:@"iOS 8.3"];
+    EnvironmentInfo* environmentInfo = [EnvironmentInfo withLayoutEngineInfo:layoutEngineInfo operatingSystemName:@"iOS 8.4"];
     
     PGJavaScriptInterpreter* runtime = [PGJavaScriptInterpreter withEnvironmentInfo:environmentInfo];
     
     runtime.mainContext[@"app"] = self;
     
-//    runtime.mainContext[@"present"] = ^(PGPage* page) {
-//        [self presentViewController:page animated:YES completion:nil];
-//    };
-    runtime.mainContext[@"loadView"] = ^(PGView* view){
-        NSLog(@"XXX");
-        view.frame = self.view.bounds;
+    runtime.mainContext[@"loadView"] = ^(PGView* view) {
         [self.view addSubview:view];
     };
-        [runtime.mainContext[@"done"] callWithArguments:nil];
-//    JSValue* value = runtime.mainContext[@"view"];
-
-//    PGView* view = [value toObjectOfClass:[PGView class]];//[PGView new];//runtime.mainContext[@"view"];
-//    view.frame = self.view.bounds;
-//    [self.view addSubview:view];
+    [runtime.mainContext[@"done"] callWithArguments:nil];
     
 }
 
