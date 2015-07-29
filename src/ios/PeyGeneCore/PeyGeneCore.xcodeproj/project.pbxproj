@@ -21,6 +21,8 @@
 		C4E6BB667C10447F713D1643 /* PGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BF211CD3B5C2D62CA638 /* PGColor.m */; };
 		F304C7D71B687F05001532AD /* PGLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F304C7D51B687F05001532AD /* PGLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F304C7D81B687F05001532AD /* PGLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F304C7D61B687F05001532AD /* PGLayer.m */; };
+		F304C7DC1B68954D001532AD /* PGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F304C7DA1B68954D001532AD /* PGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F304C7DD1B68954D001532AD /* PGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F304C7DB1B68954D001532AD /* PGLabel.m */; };
 		F307F1DB1B65537D00610D07 /* PGFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1D91B65537D00610D07 /* PGFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F307F1DC1B65537D00610D07 /* PGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1DA1B65537D00610D07 /* PGFrame.m */; };
 		F307F1DF1B65571100610D07 /* PGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1DD1B65571100610D07 /* PGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +64,8 @@
 		C4E6BF211CD3B5C2D62CA638 /* PGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGColor.m; sourceTree = "<group>"; };
 		F304C7D51B687F05001532AD /* PGLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLayer.h; sourceTree = "<group>"; };
 		F304C7D61B687F05001532AD /* PGLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLayer.m; sourceTree = "<group>"; };
+		F304C7DA1B68954D001532AD /* PGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLabel.h; sourceTree = "<group>"; };
+		F304C7DB1B68954D001532AD /* PGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLabel.m; sourceTree = "<group>"; };
 		F307F1D91B65537D00610D07 /* PGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFrame.h; sourceTree = "<group>"; };
 		F307F1DA1B65537D00610D07 /* PGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFrame.m; sourceTree = "<group>"; };
 		F307F1DD1B65571100610D07 /* PGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSize.h; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		C4E6BAE5C9F52138685E02A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F304C7D91B689449001532AD /* PGLabel */,
 				F3CBAD6D1B68562100638B9E /* PGButton */,
 				F3CBAD6C1B68561200638B9E /* PGView */,
 			);
@@ -185,6 +190,15 @@
 				F304C7D61B687F05001532AD /* PGLayer.m */,
 			);
 			name = PGLayer;
+			sourceTree = "<group>";
+		};
+		F304C7D91B689449001532AD /* PGLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F304C7DA1B68954D001532AD /* PGLabel.h */,
+				F304C7DB1B68954D001532AD /* PGLabel.m */,
+			);
+			name = PGLabel;
 			sourceTree = "<group>";
 		};
 		F3482F421B3A32CF0046EC9B = {
@@ -288,6 +302,7 @@
 				F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */,
 				F307F1DF1B65571100610D07 /* PGSize.h in Headers */,
 				C4E6B5E81DE56ADD8B8DDE2B /* PGColor.h in Headers */,
+				F304C7DC1B68954D001532AD /* PGLabel.h in Headers */,
 				F304C7D71B687F05001532AD /* PGLayer.h in Headers */,
 				F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */,
 				C4E6B309578C24FF8EA089A5 /* LayoutEngineInfo.h in Headers */,
@@ -398,6 +413,7 @@
 				F307F1DC1B65537D00610D07 /* PGFrame.m in Sources */,
 				F307F1E81B65BB1C00610D07 /* PGButton.m in Sources */,
 				F307F1E41B65573500610D07 /* PGPoint.m in Sources */,
+				F304C7DD1B68954D001532AD /* PGLabel.m in Sources */,
 				C4E6BB667C10447F713D1643 /* PGColor.m in Sources */,
 				F304C7D81B687F05001532AD /* PGLayer.m in Sources */,
 				F307F1E01B65571100610D07 /* PGSize.m in Sources */,

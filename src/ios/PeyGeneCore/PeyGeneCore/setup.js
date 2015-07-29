@@ -82,3 +82,12 @@ PGButton.init = function (frame) {
         return view;
     } else { throw new TypeError('Only PGFrame is accepted.') }
 }
+
+// PGLabel
+PGLabel.init = function (frame) {
+    if(frame instanceof PGFrame) {
+        var view = PGLabel.create();
+        view.layoutParameters = frame;
+        return view;
+    } else { throw new TypeError('Only PGFrame is accepted.') }
+}
