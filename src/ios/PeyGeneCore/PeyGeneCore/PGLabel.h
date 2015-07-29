@@ -1,26 +1,25 @@
 //
-//  PGButton.h
+//  PGLabel.h
 //  PeyGeneCore
 //
-//  Created by Peyman Mortazavi on 7/26/15.
+//  Created by Peyman Mortazavi on 7/28/15.
 //  Copyright (c) 2015 Peyman Mortazavi. All rights reserved.
 //
 
 #import <PeyGeneCore/PeyGeneCore.h>
+#import <UIKit/UIKit.h>
 
-@protocol PGButtonExporting <PGViewExporting, JSExport>
+@protocol PGLabelExporting <NSObject, JSExport>
 
 @property (nonatomic) NSString* text;
 @property (nonatomic) PGColor* textColor;
-
-// Actions
-@property (nonatomic) JSValue* onClick;
 
 +(instancetype)create;
 
 @end
 
 
-@interface PGButton : PGView<PGButtonExporting>
+
+@interface PGLabel : PGView<PGLabelExporting>
 
 @end

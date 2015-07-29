@@ -34,6 +34,13 @@ UIButton* _nativeButton;
     [_nativeButton setTitle:text forState:UIControlStateNormal];
 }
 
+-(PGColor *)textColor {
+    return [PGColor fromNativeColor:[_nativeButton currentTitleColor]];
+}
+-(void)setTextColor:(PGColor *)textColor {
+    [_nativeButton setTitleColor:[textColor toNativeColor] forState:UIControlStateNormal];
+}
+
 -(void)buttonClicked {
     if (onClick != nil) {
         [onClick callWithArguments:[NSArray arrayWithObject:self]];

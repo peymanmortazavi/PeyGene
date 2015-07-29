@@ -7,9 +7,11 @@
 //
 
 #import <PeyGeneCore/PeyGeneCore.h>
+#import <objc/runtime.h>
 #import "PGColor.h"
 #import "PGSize.h"
 #import "PGButton.h"
+#import "PGLabel.h"
 
 @implementation PGJavaScriptInterpreter
 
@@ -43,16 +45,40 @@
     self.mainContext[@"PGFrame"] = [PGFrame class];
     self.mainContext[@"PGView"] = [PGView class];
     self.mainContext[@"PGButton"] = [PGButton class];
+    self.mainContext[@"PGLabel"] = [PGLabel class];
 
     // Register common functions.
     self.mainContext[@"console"] = [[NSMutableDictionary alloc]initWithCapacity:1];
-    self.mainContext[@"console"][@"log"] = ^(NSString* object) {
-        NSLog(object);
+    self.mainContext[@"console"][@"log"] = ^(NSString* value) {
+//        NSObject* object = [value toObject];
+//        
+//        NSMutableArray* properties = [self allPropertiesOfClass:[object class]];
+//        [properties removeObjectsInArray:[NSArray arrayWithObjects:@"hash", @"superclass", @"description", @"debugDescription", nil]];
+//        NSLog([properties description]);
+        NSLog(value);
     };
 
     // Execute setup.js
     NSURL* url =[[NSBundle bundleForClass:[PGJavaScriptInterpreter class]] URLForResource:@"setup" withExtension:@"js"];
     [self.mainContext evaluateScript:[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil]];
+}
+
+-(NSMutableArray*)allPropertiesOfClass:(Class)class {
+    unsigned count;
+    objc_property_t *properties = class_copyPropertyList(class, &count);
+    
+    NSMutableArray *rv = [NSMutableArray array];
+    
+    unsigned i;
+    for (i = 0; i < count; i++)
+    {
+        objc_property_t property = properties[i];
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        [rv addObject:name];
+    }
+    
+    free(properties);
+    return rv;
 }
 
 @end
