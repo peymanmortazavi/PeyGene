@@ -12,6 +12,9 @@
 
 @property (nonatomic) NSString* text;
 
+// Actions
+@property (nonatomic) JSValue* onClick;
+
 +(instancetype)create;
 
 @end

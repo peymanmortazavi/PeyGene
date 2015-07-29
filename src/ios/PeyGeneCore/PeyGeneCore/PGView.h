@@ -7,6 +7,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "PGColor.h"
 #import "PGFrame.h"
+#import "PGLayer.h"
 
 @class PGView;
 
@@ -16,13 +17,14 @@
 
 @property (nonatomic) PGColor* backgroundColor;
 @property (nonatomic) PGFrame* layoutParameters;
+@property (readonly, nonatomic) PGLayer* layer;
 
 -(void)addSubview:(PGView*)view;
 
 @end
 
 
-@interface PGView : UIView<PGViewExporting>
+@interface PGView : NSObject<PGViewExporting>
 
 @property (nonatomic) UIView* nativeView;
 

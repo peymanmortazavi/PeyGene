@@ -45,11 +45,25 @@ PGFrame.init = function(value1, value2, value3, value4) {
 PGFrame.zero = PGFrame.create();
 
 // PGColor
-PGColor.white = PGColor.fromRGBA(255, 255, 255, 255);
-PGColor.black = PGColor.fromRGBA(0,   0,   0,   255);
-PGColor.red   = PGColor.fromRGBA(255, 0,   0,   255);
-PGColor.green = PGColor.fromRGBA(0,   255, 0,   255);
-PGColor.blue  = PGColor.fromRGBA(0,   0,   255, 255);
+
+// Common 255 scale colors.
+PGColor.white   = PGColor.fromRGBA(255, 255, 255, 255);
+PGColor.black   = PGColor.fromRGBA(0,   0,   0,   255);
+PGColor.red     = PGColor.fromRGBA(255, 0,   0,   255);
+PGColor.lime    = PGColor.fromRGBA(0,   255, 0,   255);
+PGColor.blue    = PGColor.fromRGBA(0,   0,   255, 255);
+PGColor.yellow  = PGColor.fromRGBA(255, 255, 0,   255);
+PGColor.magenta = PGColor.fromRGBA(255, 0,   255, 255);
+PGColor.cyan    = PGColor.fromRGBA(0,   255, 255, 255);
+
+// Common 128 scale colors.
+PGColor.gray    = PGColor.fromRGBA(128, 128, 128, 255);
+PGColor.maroon  = PGColor.fromRGBA(128, 0,   0,   255);
+PGColor.green   = PGColor.fromRGBA(0,   128, 0,   255);
+PGColor.navy    = PGColor.fromRGBA(0,   0,   128, 255);
+PGColor.olive   = PGColor.fromRGBA(128, 128, 0,   255);
+PGColor.purple  = PGColor.fromRGBA(128, 0,   128, 255);
+PGColor.teal    = PGColor.fromRGBA(0,   128, 128, 255);
 
 // PGView
 PGView.init = function (frame) {
@@ -68,34 +82,3 @@ PGButton.init = function (frame) {
         return view;
     } else { throw new TypeError('Only PGFrame is accepted.') }
 }
-
-// Test
-var done = function() {
-
-     try {
-         
-//         var view = PGView.init(PGFrame.init(0,0, 100, 200));
-//         view.backgroundColor = PGColor.fromRGBA(14, 142, 180, 100);
-         
-//         var view2 = PGView.create();
-//         view2.layoutParameters = PGFrame.init(10, 0, 50, 100);
-//         view2.backgroundColor = PGColor.green;
-         
-         var button1 = PGButton.create();
-         button1.backgroundColor = PGColor.black;
-         button1.layoutParameters = PGFrame.init(0,0,80,80);
-//         console.log(button1.backgroundColor);
-         //.init(PGFrame.init(10, 10, 100, 100));
-//         console.log(button1.backgroundColor);
-//         button1.backgroundColor = PGColor.red;
-         button1.text = 'OK 2';
-         console.log(button1.layoutParameters);
-//         console.log(button1.layoutParameters.width);
-         
-//         view.addSubview(button1);
-         loadView(button1);
-         
-     } catch(ex){
-         console.log(ex);
-     }
-};

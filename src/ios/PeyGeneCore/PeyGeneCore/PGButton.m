@@ -12,6 +12,8 @@
 
 UIButton* _nativeButton;
 
+@synthesize onClick;
+
 +(instancetype)create {
     return [[PGButton alloc] init];
 }
@@ -19,6 +21,7 @@ UIButton* _nativeButton;
 -(instancetype)init {
     if(self = [super init]) {
         _nativeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_nativeButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
         super.nativeView = _nativeButton;
     }
     return self;
@@ -29,6 +32,12 @@ UIButton* _nativeButton;
 }
 -(void)setText:(NSString *)text {
     [_nativeButton setTitle:text forState:UIControlStateNormal];
+}
+
+-(void)buttonClicked {
+    if (onClick != nil) {
+        [onClick callWithArguments:[NSArray arrayWithObject:self]];
+    }
 }
 
 @end

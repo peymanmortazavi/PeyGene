@@ -19,13 +19,15 @@
 		C4E6B78F0C996C92BF12A313 /* PGView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BD3EB837AAB726415A09 /* PGView.m */; };
 		C4E6BA3DEAB6A0481FBCB6E9 /* PGJavaScriptInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6BC7BEB6981633A06D92B /* PGJavaScriptInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6BB667C10447F713D1643 /* PGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BF211CD3B5C2D62CA638 /* PGColor.m */; };
+		F304C7D71B687F05001532AD /* PGLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F304C7D51B687F05001532AD /* PGLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F304C7D81B687F05001532AD /* PGLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F304C7D61B687F05001532AD /* PGLayer.m */; };
 		F307F1DB1B65537D00610D07 /* PGFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1D91B65537D00610D07 /* PGFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F307F1DC1B65537D00610D07 /* PGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1DA1B65537D00610D07 /* PGFrame.m */; };
 		F307F1DF1B65571100610D07 /* PGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1DD1B65571100610D07 /* PGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F307F1E01B65571100610D07 /* PGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1DE1B65571100610D07 /* PGSize.m */; };
 		F307F1E31B65573500610D07 /* PGPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1E11B65573500610D07 /* PGPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F307F1E41B65573500610D07 /* PGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1E21B65573500610D07 /* PGPoint.m */; };
-		F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1E51B65BB1C00610D07 /* PGButton.h */; };
+		F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1E51B65BB1C00610D07 /* PGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F307F1E81B65BB1C00610D07 /* PGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1E61B65BB1C00610D07 /* PGButton.m */; };
 		F3482F521B3A32D00046EC9B /* PeyGeneCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F3482F511B3A32D00046EC9B /* PeyGeneCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3482F581B3A32D00046EC9B /* PeyGeneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3482F4C1B3A32D00046EC9B /* PeyGeneCore.framework */; };
@@ -58,6 +60,8 @@
 		C4E6BD3EB837AAB726415A09 /* PGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGView.m; sourceTree = "<group>"; };
 		C4E6BEBFF136347289D3380F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		C4E6BF211CD3B5C2D62CA638 /* PGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGColor.m; sourceTree = "<group>"; };
+		F304C7D51B687F05001532AD /* PGLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLayer.h; sourceTree = "<group>"; };
+		F304C7D61B687F05001532AD /* PGLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLayer.m; sourceTree = "<group>"; };
 		F307F1D91B65537D00610D07 /* PGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFrame.h; sourceTree = "<group>"; };
 		F307F1DA1B65537D00610D07 /* PGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFrame.m; sourceTree = "<group>"; };
 		F307F1DD1B65571100610D07 /* PGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSize.h; sourceTree = "<group>"; };
@@ -120,10 +124,8 @@
 		C4E6BAE5C9F52138685E02A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C4E6BD3EB837AAB726415A09 /* PGView.m */,
-				C4E6B7D029CA0125B0C7E5D2 /* PGView.h */,
-				F307F1E51B65BB1C00610D07 /* PGButton.h */,
-				F307F1E61B65BB1C00610D07 /* PGButton.m */,
+				F3CBAD6D1B68562100638B9E /* PGButton */,
+				F3CBAD6C1B68561200638B9E /* PGView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -131,16 +133,58 @@
 		C4E6BC0E0A47B4B7591984F5 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				F304C7D41B687EEE001532AD /* PGLayer */,
+				F304C7D31B687EC1001532AD /* PGPoint */,
+				F304C7D21B687EB8001532AD /* PGSize */,
+				F304C7D11B687EAE001532AD /* PGFrame */,
+				F304C7D01B687EA1001532AD /* PGColor */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		F304C7D01B687EA1001532AD /* PGColor */ = {
+			isa = PBXGroup;
+			children = (
 				C4E6BF211CD3B5C2D62CA638 /* PGColor.m */,
 				C4E6B54C330BBA07DB5F6BE3 /* PGColor.h */,
+			);
+			name = PGColor;
+			sourceTree = "<group>";
+		};
+		F304C7D11B687EAE001532AD /* PGFrame */ = {
+			isa = PBXGroup;
+			children = (
 				F307F1D91B65537D00610D07 /* PGFrame.h */,
 				F307F1DA1B65537D00610D07 /* PGFrame.m */,
+			);
+			name = PGFrame;
+			sourceTree = "<group>";
+		};
+		F304C7D21B687EB8001532AD /* PGSize */ = {
+			isa = PBXGroup;
+			children = (
 				F307F1DD1B65571100610D07 /* PGSize.h */,
 				F307F1DE1B65571100610D07 /* PGSize.m */,
+			);
+			name = PGSize;
+			sourceTree = "<group>";
+		};
+		F304C7D31B687EC1001532AD /* PGPoint */ = {
+			isa = PBXGroup;
+			children = (
 				F307F1E11B65573500610D07 /* PGPoint.h */,
 				F307F1E21B65573500610D07 /* PGPoint.m */,
 			);
-			name = Graphics;
+			name = PGPoint;
+			sourceTree = "<group>";
+		};
+		F304C7D41B687EEE001532AD /* PGLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F304C7D51B687F05001532AD /* PGLayer.h */,
+				F304C7D61B687F05001532AD /* PGLayer.m */,
+			);
+			name = PGLayer;
 			sourceTree = "<group>";
 		};
 		F3482F421B3A32CF0046EC9B = {
@@ -166,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				F3D5EA801B3CD9C600B6D2AF /* Pages */,
-				F3D5EA7B1B3CBADA00B6D2AF /* ViewRenderers */,
 				F3482F511B3A32D00046EC9B /* PeyGeneCore.h */,
 				F3482F4F1B3A32D00046EC9B /* Supporting Files */,
 				C4E6BAE5C9F52138685E02A1 /* Views */,
@@ -203,11 +246,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F3D5EA7B1B3CBADA00B6D2AF /* ViewRenderers */ = {
+		F3CBAD6C1B68561200638B9E /* PGView */ = {
 			isa = PBXGroup;
 			children = (
+				C4E6BD3EB837AAB726415A09 /* PGView.m */,
+				C4E6B7D029CA0125B0C7E5D2 /* PGView.h */,
 			);
-			name = ViewRenderers;
+			name = PGView;
+			sourceTree = "<group>";
+		};
+		F3CBAD6D1B68562100638B9E /* PGButton */ = {
+			isa = PBXGroup;
+			children = (
+				F307F1E51B65BB1C00610D07 /* PGButton.h */,
+				F307F1E61B65BB1C00610D07 /* PGButton.m */,
+			);
+			name = PGButton;
 			sourceTree = "<group>";
 		};
 		F3D5EA801B3CD9C600B6D2AF /* Pages */ = {
@@ -234,6 +288,7 @@
 				F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */,
 				F307F1DF1B65571100610D07 /* PGSize.h in Headers */,
 				C4E6B5E81DE56ADD8B8DDE2B /* PGColor.h in Headers */,
+				F304C7D71B687F05001532AD /* PGLayer.h in Headers */,
 				F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */,
 				C4E6B309578C24FF8EA089A5 /* LayoutEngineInfo.h in Headers */,
 			);
@@ -344,6 +399,7 @@
 				F307F1E81B65BB1C00610D07 /* PGButton.m in Sources */,
 				F307F1E41B65573500610D07 /* PGPoint.m in Sources */,
 				C4E6BB667C10447F713D1643 /* PGColor.m in Sources */,
+				F304C7D81B687F05001532AD /* PGLayer.m in Sources */,
 				F307F1E01B65571100610D07 /* PGSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

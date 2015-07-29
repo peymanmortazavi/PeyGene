@@ -43,12 +43,16 @@
     
     PGJavaScriptInterpreter* runtime = [PGJavaScriptInterpreter withEnvironmentInfo:environmentInfo];
     
+    // Execute setup.js
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"app" withExtension:@"js"];
+    //[[NSBundle bundleForClass:[PGJavaScriptInterpreter class]] URLForResource:@"setup" withExtension:@"js"];
+    
     runtime.mainContext[@"app"] = self;
     
     runtime.mainContext[@"loadView"] = ^(PGView* view) {
-        NSLog([view.nativeView description]);
         [self.view addSubview:view.nativeView];
     };
+    [runtime.mainContext evaluateScript:[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil]];
     [runtime.mainContext[@"done"] callWithArguments:nil];
     
 }

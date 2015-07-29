@@ -16,6 +16,7 @@
 		F379F5AB1B3A47B800321259 /* PGAppRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F379F5AA1B3A47B800321259 /* PGAppRunnerTests.m */; };
 		F3C945501B4713C3001AAFFA /* PeyGeneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */; };
 		F3C945511B4713C3001AAFFA /* PeyGeneCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3CBAD6B1B6854C500638B9E /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = F3CBAD6A1B6854C500638B9E /* app.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F379F5A91B3A47B800321259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F379F5AA1B3A47B800321259 /* PGAppRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAppRunnerTests.m; sourceTree = "<group>"; };
 		F3C9454F1B4713C3001AAFFA /* PeyGeneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = PeyGeneCore.framework; path = "/Users/peyman/Library/Developer/Xcode/DerivedData/PeyGene-eicvhkynwsqcfheblvfudrmzfufw/Build/Products/Debug-iphoneos/PeyGeneCore.framework"; sourceTree = "<absolute>"; };
+		F3CBAD6A1B6854C500638B9E /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = app.js; path = ../../../../../../Desktop/app.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		F379F58D1B3A47B700321259 /* PGAppRunner */ = {
 			isa = PBXGroup;
 			children = (
+				F3CBAD6A1B6854C500638B9E /* app.js */,
 				F379F5921B3A47B700321259 /* AppDelegate.h */,
 				F379F5931B3A47B700321259 /* AppDelegate.m */,
 				F379F5951B3A47B700321259 /* ViewController.h */,
@@ -221,6 +224,7 @@
 			files = (
 				F379F59A1B3A47B700321259 /* Main.storyboard in Resources */,
 				F379F59F1B3A47B700321259 /* LaunchScreen.xib in Resources */,
+				F3CBAD6B1B6854C500638B9E /* app.js in Resources */,
 				F379F59C1B3A47B700321259 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

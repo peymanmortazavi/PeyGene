@@ -9,6 +9,8 @@
 
 @implementation PGView
 
+@synthesize layer = _layer;
+
 +(instancetype)create {
     return [[PGView alloc] initWithNativeView:[[UIView alloc] init]];
 }
@@ -45,6 +47,7 @@ PGFrame* _layoutParameters;
         self.nativeView = view;
         self.backgroundColor = [PGColor fromNativeColor:self.nativeView.backgroundColor];
         self.layoutParameters = [PGFrame fromNativeFrame:self.nativeView.frame];
+        _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
     }
     return self;
 }
@@ -52,6 +55,7 @@ PGFrame* _layoutParameters;
 -(void)syncNativeView {
     self.nativeView.backgroundColor = [self.backgroundColor toNativeColor];
     self.nativeView.frame = [self.layoutParameters toNativeFrame];
+    _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
 }
 
 -(void)addSubview:(PGView *)view {
