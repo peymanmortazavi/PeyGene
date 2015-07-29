@@ -19,12 +19,13 @@
 @property (nonatomic) PGPoint * location;
 @property (nonatomic) PGSize * size;
 
-+(instancetype)createWithX:(float)x y:(float)y width:(float)w height:(float)h;
++(instancetype)create;
 
 @end
 
 @interface PGFrame : NSObject<PGFrameExporting>
 
 -(CGRect)toNativeFrame;
++(instancetype)fromNativeFrame:(CGRect)rect;
 
 @end

@@ -11,31 +11,29 @@
 		C4E6B143E36733C58D50BF0C /* PGLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B45B99E1F1AC014DD4CE /* PGLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6B1B04E767DBD62F23079 /* PGJavaScriptInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6B977870588E8B5BAE868 /* PGJavaScriptInterpreter.m */; };
 		C4E6B1FDB6132AE9D84EB1A9 /* LayoutEngineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BC1703AC424113467ACF /* LayoutEngineInfo.m */; };
-		C4E6B2ED68ED1C8298034658 /* PGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6B936AF03787756B90EAF /* PGFrame.m */; };
 		C4E6B309578C24FF8EA089A5 /* LayoutEngineInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B2048483BEBB38CBA674 /* LayoutEngineInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6B344C4E851B4C25D7B41 /* EnvironmentInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6BA085AF8E1B4F65D321D /* EnvironmentInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6B40BAAC27D7D106C6BCE /* PGView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B7D029CA0125B0C7E5D2 /* PGView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4E6B45165C5B08851EF1D66 /* PGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B789AC14D1A3FF345DCA /* PGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6B4D5AE32B50EF5E5A24B /* EnvironmentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6B390094994E8800EA86B /* EnvironmentInfo.m */; };
+		C4E6B5E81DE56ADD8B8DDE2B /* PGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B54C330BBA07DB5F6BE3 /* PGColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E6B78F0C996C92BF12A313 /* PGView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BD3EB837AAB726415A09 /* PGView.m */; };
-		C4E6B8004671EDFA69BC5B44 /* PGPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B03477942019B02F4869 /* PGPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4E6B9099F61D91A2B8D3C1A /* PGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6B48E40D84FEB93C5A6EB /* PGPoint.m */; };
 		C4E6BA3DEAB6A0481FBCB6E9 /* PGJavaScriptInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6BC7BEB6981633A06D92B /* PGJavaScriptInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4E6BAAD83C7C3771B5FDB47 /* PGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6B0C2B122CED361897C3E /* PGSize.m */; };
-		C4E6BDEB57313628C8F7E567 /* PGFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6B35F6157E56124FFA039 /* PGFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4E6BB667C10447F713D1643 /* PGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6BF211CD3B5C2D62CA638 /* PGColor.m */; };
+		F304C7D71B687F05001532AD /* PGLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F304C7D51B687F05001532AD /* PGLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F304C7D81B687F05001532AD /* PGLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F304C7D61B687F05001532AD /* PGLayer.m */; };
+		F307F1DB1B65537D00610D07 /* PGFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1D91B65537D00610D07 /* PGFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F307F1DC1B65537D00610D07 /* PGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1DA1B65537D00610D07 /* PGFrame.m */; };
+		F307F1DF1B65571100610D07 /* PGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1DD1B65571100610D07 /* PGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F307F1E01B65571100610D07 /* PGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1DE1B65571100610D07 /* PGSize.m */; };
+		F307F1E31B65573500610D07 /* PGPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1E11B65573500610D07 /* PGPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F307F1E41B65573500610D07 /* PGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1E21B65573500610D07 /* PGPoint.m */; };
+		F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F307F1E51B65BB1C00610D07 /* PGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F307F1E81B65BB1C00610D07 /* PGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F1E61B65BB1C00610D07 /* PGButton.m */; };
 		F3482F521B3A32D00046EC9B /* PeyGeneCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F3482F511B3A32D00046EC9B /* PeyGeneCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3482F581B3A32D00046EC9B /* PeyGeneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3482F4C1B3A32D00046EC9B /* PeyGeneCore.framework */; };
 		F3482F5F1B3A32D00046EC9B /* PeyGeneCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3482F5E1B3A32D00046EC9B /* PeyGeneCoreTests.m */; };
 		F36A01D81B3A5D5200448D1F /* setup.js in Resources */ = {isa = PBXBuildFile; fileRef = C4E6BBC4BACCFACCB47C8FD9 /* setup.js */; };
-		F3D5EA7E1B3CBB1300B6D2AF /* PGViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D5EA7C1B3CBB1300B6D2AF /* PGViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3D5EA7F1B3CBB1300B6D2AF /* PGViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D5EA7D1B3CBB1300B6D2AF /* PGViewRenderer.m */; };
-		F3D5EA831B3CDAB200B6D2AF /* PGPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D5EA811B3CDAB200B6D2AF /* PGPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3D5EA841B3CDAB200B6D2AF /* PGPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D5EA821B3CDAB200B6D2AF /* PGPage.m */; };
-		F3D5EA871B3CF1C100B6D2AF /* PGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D5EA851B3CF1C100B6D2AF /* PGColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3D5EA881B3CF1C100B6D2AF /* PGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D5EA861B3CF1C100B6D2AF /* PGColor.m */; };
 		F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E80B1C1B4448AE009B4A33 /* PGDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3E80B201B444E15009B4A33 /* PGControlTargetActionPair.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3E80B211B444E15009B4A33 /* PGControlTargetActionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,16 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4E6B03477942019B02F4869 /* PGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPoint.h; sourceTree = "<group>"; };
-		C4E6B0C2B122CED361897C3E /* PGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSize.m; sourceTree = "<group>"; };
 		C4E6B2048483BEBB38CBA674 /* LayoutEngineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutEngineInfo.h; sourceTree = "<group>"; };
-		C4E6B35F6157E56124FFA039 /* PGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFrame.h; sourceTree = "<group>"; };
 		C4E6B390094994E8800EA86B /* EnvironmentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentInfo.m; sourceTree = "<group>"; };
 		C4E6B45B99E1F1AC014DD4CE /* PGLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLogging.h; sourceTree = "<group>"; };
-		C4E6B48E40D84FEB93C5A6EB /* PGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPoint.m; sourceTree = "<group>"; };
-		C4E6B789AC14D1A3FF345DCA /* PGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSize.h; sourceTree = "<group>"; };
+		C4E6B54C330BBA07DB5F6BE3 /* PGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGColor.h; sourceTree = "<group>"; };
 		C4E6B7D029CA0125B0C7E5D2 /* PGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGView.h; sourceTree = "<group>"; };
-		C4E6B936AF03787756B90EAF /* PGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFrame.m; sourceTree = "<group>"; };
 		C4E6B977870588E8B5BAE868 /* PGJavaScriptInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGJavaScriptInterpreter.m; sourceTree = "<group>"; };
 		C4E6BA085AF8E1B4F65D321D /* EnvironmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentInfo.h; sourceTree = "<group>"; };
 		C4E6BBC4BACCFACCB47C8FD9 /* setup.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = setup.js; sourceTree = "<group>"; };
@@ -66,21 +59,24 @@
 		C4E6BC7BEB6981633A06D92B /* PGJavaScriptInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGJavaScriptInterpreter.h; sourceTree = "<group>"; };
 		C4E6BD3EB837AAB726415A09 /* PGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGView.m; sourceTree = "<group>"; };
 		C4E6BEBFF136347289D3380F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C4E6BF211CD3B5C2D62CA638 /* PGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGColor.m; sourceTree = "<group>"; };
+		F304C7D51B687F05001532AD /* PGLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLayer.h; sourceTree = "<group>"; };
+		F304C7D61B687F05001532AD /* PGLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLayer.m; sourceTree = "<group>"; };
+		F307F1D91B65537D00610D07 /* PGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFrame.h; sourceTree = "<group>"; };
+		F307F1DA1B65537D00610D07 /* PGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFrame.m; sourceTree = "<group>"; };
+		F307F1DD1B65571100610D07 /* PGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSize.h; sourceTree = "<group>"; };
+		F307F1DE1B65571100610D07 /* PGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSize.m; sourceTree = "<group>"; };
+		F307F1E11B65573500610D07 /* PGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPoint.h; sourceTree = "<group>"; };
+		F307F1E21B65573500610D07 /* PGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPoint.m; sourceTree = "<group>"; };
+		F307F1E51B65BB1C00610D07 /* PGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGButton.h; sourceTree = "<group>"; };
+		F307F1E61B65BB1C00610D07 /* PGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGButton.m; sourceTree = "<group>"; };
 		F3482F4C1B3A32D00046EC9B /* PeyGeneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeyGeneCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3482F501B3A32D00046EC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3482F511B3A32D00046EC9B /* PeyGeneCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeyGeneCore.h; sourceTree = "<group>"; };
 		F3482F571B3A32D00046EC9B /* PeyGeneCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeyGeneCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3482F5D1B3A32D00046EC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3482F5E1B3A32D00046EC9B /* PeyGeneCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeyGeneCoreTests.m; sourceTree = "<group>"; };
-		F3D5EA7C1B3CBB1300B6D2AF /* PGViewRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewRenderer.h; sourceTree = "<group>"; };
-		F3D5EA7D1B3CBB1300B6D2AF /* PGViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewRenderer.m; sourceTree = "<group>"; };
-		F3D5EA811B3CDAB200B6D2AF /* PGPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPage.h; sourceTree = "<group>"; };
-		F3D5EA821B3CDAB200B6D2AF /* PGPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPage.m; sourceTree = "<group>"; };
-		F3D5EA851B3CF1C100B6D2AF /* PGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGColor.h; sourceTree = "<group>"; };
-		F3D5EA861B3CF1C100B6D2AF /* PGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGColor.m; sourceTree = "<group>"; };
 		F3E80B1C1B4448AE009B4A33 /* PGDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDefines.h; sourceTree = "<group>"; };
-		F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGControlTargetActionPair.h; sourceTree = "<group>"; };
-		F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGControlTargetActionPair.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,23 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C4E6B21B440314F7B25D6635 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				C4E6B03477942019B02F4869 /* PGPoint.h */,
-				C4E6B48E40D84FEB93C5A6EB /* PGPoint.m */,
-				C4E6B0C2B122CED361897C3E /* PGSize.m */,
-				C4E6B789AC14D1A3FF345DCA /* PGSize.h */,
-				C4E6B936AF03787756B90EAF /* PGFrame.m */,
-				C4E6B35F6157E56124FFA039 /* PGFrame.h */,
-				F3D5EA851B3CF1C100B6D2AF /* PGColor.h */,
-				F3D5EA861B3CF1C100B6D2AF /* PGColor.m */,
-				F3E80B1E1B444E15009B4A33 /* PGControlTargetActionPair.h */,
-				F3E80B1F1B444E15009B4A33 /* PGControlTargetActionPair.m */,
-			);
-			name = Shared;
-			sourceTree = "<group>";
-		};
 		C4E6B8C276F95A660EEBD5F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +108,7 @@
 				C4E6B45B99E1F1AC014DD4CE /* PGLogging.h */,
 				C4E6B2048483BEBB38CBA674 /* LayoutEngineInfo.h */,
 				F3E80B1C1B4448AE009B4A33 /* PGDefines.h */,
+				C4E6BC0E0A47B4B7591984F5 /* Graphics */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -144,11 +124,67 @@
 		C4E6BAE5C9F52138685E02A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C4E6BD3EB837AAB726415A09 /* PGView.m */,
-				C4E6B7D029CA0125B0C7E5D2 /* PGView.h */,
-				C4E6B21B440314F7B25D6635 /* Shared */,
+				F3CBAD6D1B68562100638B9E /* PGButton */,
+				F3CBAD6C1B68561200638B9E /* PGView */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C4E6BC0E0A47B4B7591984F5 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F304C7D41B687EEE001532AD /* PGLayer */,
+				F304C7D31B687EC1001532AD /* PGPoint */,
+				F304C7D21B687EB8001532AD /* PGSize */,
+				F304C7D11B687EAE001532AD /* PGFrame */,
+				F304C7D01B687EA1001532AD /* PGColor */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		F304C7D01B687EA1001532AD /* PGColor */ = {
+			isa = PBXGroup;
+			children = (
+				C4E6BF211CD3B5C2D62CA638 /* PGColor.m */,
+				C4E6B54C330BBA07DB5F6BE3 /* PGColor.h */,
+			);
+			name = PGColor;
+			sourceTree = "<group>";
+		};
+		F304C7D11B687EAE001532AD /* PGFrame */ = {
+			isa = PBXGroup;
+			children = (
+				F307F1D91B65537D00610D07 /* PGFrame.h */,
+				F307F1DA1B65537D00610D07 /* PGFrame.m */,
+			);
+			name = PGFrame;
+			sourceTree = "<group>";
+		};
+		F304C7D21B687EB8001532AD /* PGSize */ = {
+			isa = PBXGroup;
+			children = (
+				F307F1DD1B65571100610D07 /* PGSize.h */,
+				F307F1DE1B65571100610D07 /* PGSize.m */,
+			);
+			name = PGSize;
+			sourceTree = "<group>";
+		};
+		F304C7D31B687EC1001532AD /* PGPoint */ = {
+			isa = PBXGroup;
+			children = (
+				F307F1E11B65573500610D07 /* PGPoint.h */,
+				F307F1E21B65573500610D07 /* PGPoint.m */,
+			);
+			name = PGPoint;
+			sourceTree = "<group>";
+		};
+		F304C7D41B687EEE001532AD /* PGLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F304C7D51B687F05001532AD /* PGLayer.h */,
+				F304C7D61B687F05001532AD /* PGLayer.m */,
+			);
+			name = PGLayer;
 			sourceTree = "<group>";
 		};
 		F3482F421B3A32CF0046EC9B = {
@@ -174,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				F3D5EA801B3CD9C600B6D2AF /* Pages */,
-				F3D5EA7B1B3CBADA00B6D2AF /* ViewRenderers */,
 				F3482F511B3A32D00046EC9B /* PeyGeneCore.h */,
 				F3482F4F1B3A32D00046EC9B /* Supporting Files */,
 				C4E6BAE5C9F52138685E02A1 /* Views */,
@@ -211,20 +246,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F3D5EA7B1B3CBADA00B6D2AF /* ViewRenderers */ = {
+		F3CBAD6C1B68561200638B9E /* PGView */ = {
 			isa = PBXGroup;
 			children = (
-				F3D5EA7C1B3CBB1300B6D2AF /* PGViewRenderer.h */,
-				F3D5EA7D1B3CBB1300B6D2AF /* PGViewRenderer.m */,
+				C4E6BD3EB837AAB726415A09 /* PGView.m */,
+				C4E6B7D029CA0125B0C7E5D2 /* PGView.h */,
 			);
-			name = ViewRenderers;
+			name = PGView;
+			sourceTree = "<group>";
+		};
+		F3CBAD6D1B68562100638B9E /* PGButton */ = {
+			isa = PBXGroup;
+			children = (
+				F307F1E51B65BB1C00610D07 /* PGButton.h */,
+				F307F1E61B65BB1C00610D07 /* PGButton.m */,
+			);
+			name = PGButton;
 			sourceTree = "<group>";
 		};
 		F3D5EA801B3CD9C600B6D2AF /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				F3D5EA811B3CDAB200B6D2AF /* PGPage.h */,
-				F3D5EA821B3CDAB200B6D2AF /* PGPage.m */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -240,15 +282,14 @@
 				C4E6B143E36733C58D50BF0C /* PGLogging.h in Headers */,
 				C4E6B344C4E851B4C25D7B41 /* EnvironmentInfo.h in Headers */,
 				C4E6BA3DEAB6A0481FBCB6E9 /* PGJavaScriptInterpreter.h in Headers */,
-				C4E6BDEB57313628C8F7E567 /* PGFrame.h in Headers */,
-				F3D5EA831B3CDAB200B6D2AF /* PGPage.h in Headers */,
 				C4E6B40BAAC27D7D106C6BCE /* PGView.h in Headers */,
-				C4E6B8004671EDFA69BC5B44 /* PGPoint.h in Headers */,
-				C4E6B45165C5B08851EF1D66 /* PGSize.h in Headers */,
-				F3D5EA871B3CF1C100B6D2AF /* PGColor.h in Headers */,
-				F3E80B201B444E15009B4A33 /* PGControlTargetActionPair.h in Headers */,
+				F307F1DB1B65537D00610D07 /* PGFrame.h in Headers */,
+				F307F1E31B65573500610D07 /* PGPoint.h in Headers */,
+				F307F1E71B65BB1C00610D07 /* PGButton.h in Headers */,
+				F307F1DF1B65571100610D07 /* PGSize.h in Headers */,
+				C4E6B5E81DE56ADD8B8DDE2B /* PGColor.h in Headers */,
+				F304C7D71B687F05001532AD /* PGLayer.h in Headers */,
 				F3E80B1D1B4449DA009B4A33 /* PGDefines.h in Headers */,
-				F3D5EA7E1B3CBB1300B6D2AF /* PGViewRenderer.h in Headers */,
 				C4E6B309578C24FF8EA089A5 /* LayoutEngineInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,16 +392,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E6B78F0C996C92BF12A313 /* PGView.m in Sources */,
-				F3D5EA841B3CDAB200B6D2AF /* PGPage.m in Sources */,
-				C4E6B9099F61D91A2B8D3C1A /* PGPoint.m in Sources */,
-				F3E80B211B444E15009B4A33 /* PGControlTargetActionPair.m in Sources */,
-				C4E6BAAD83C7C3771B5FDB47 /* PGSize.m in Sources */,
-				F3D5EA881B3CF1C100B6D2AF /* PGColor.m in Sources */,
-				C4E6B2ED68ED1C8298034658 /* PGFrame.m in Sources */,
-				F3D5EA7F1B3CBB1300B6D2AF /* PGViewRenderer.m in Sources */,
 				C4E6B1B04E767DBD62F23079 /* PGJavaScriptInterpreter.m in Sources */,
 				C4E6B1FDB6132AE9D84EB1A9 /* LayoutEngineInfo.m in Sources */,
 				C4E6B4D5AE32B50EF5E5A24B /* EnvironmentInfo.m in Sources */,
+				F307F1DC1B65537D00610D07 /* PGFrame.m in Sources */,
+				F307F1E81B65BB1C00610D07 /* PGButton.m in Sources */,
+				F307F1E41B65573500610D07 /* PGPoint.m in Sources */,
+				C4E6BB667C10447F713D1643 /* PGColor.m in Sources */,
+				F304C7D81B687F05001532AD /* PGLayer.m in Sources */,
+				F307F1E01B65571100610D07 /* PGSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

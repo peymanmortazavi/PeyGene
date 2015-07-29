@@ -14,8 +14,6 @@
 
 +(instancetype)fromR:(float)red g:(float)green b:(float)blue a:(float)a;
 
--(UIColor*)toNativeColor;
-
 @property (nonatomic) float red;
 @property (nonatomic) float green;
 @property (nonatomic) float blue;
@@ -23,8 +21,11 @@
 
 @end
 
-
 @interface PGColor : NSObject<PGColorExporting>
+
++(instancetype)fromNativeColor:(UIColor*)nativeColor;
+
+-(UIColor*)toNativeColor;
 
 -(instancetype)initFromR:(float)red g:(float)green b:(float)blue a:(float)a;
 

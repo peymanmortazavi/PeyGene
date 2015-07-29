@@ -7,21 +7,17 @@
 
 @implementation PGFrame
 
-+(instancetype)createWithX:(float)x y:(float)y width:(float)w height:(float)h {
++(instancetype)create {
+    return [[PGFrame alloc] init];
+}
+
++(instancetype)fromNativeFrame:(CGRect)rect {
     PGFrame* frame = [[PGFrame alloc] init];
-    frame.width = w;
-    frame.height = h;
-    frame.x = x;
-    frame.y = y;
+    frame.width = rect.size.width;
+    frame.height = rect.size.height;
+    frame.x = rect.origin.x;
+    frame.y = rect.origin.y;
     return frame;
-}
-
-+ (NSSet *)keyPathsForValuesAffectingLocation {
-    return [NSSet setWithObjects:@"x", @"y", nil];
-}
-
-+ (NSSet *)keyPathsForValuesAffectingSize {
-    return [NSSet setWithObjects:@"width", @"height", nil];
 }
 
 -(instancetype)init {

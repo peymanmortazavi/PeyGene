@@ -7,7 +7,7 @@
 
 @implementation PGPoint
 
-+(instancetype)create{
++(instancetype)create {
     return [[PGPoint alloc]init];
 }
 

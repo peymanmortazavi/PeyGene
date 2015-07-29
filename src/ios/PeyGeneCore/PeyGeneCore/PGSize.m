@@ -7,7 +7,7 @@
 
 @implementation PGSize
 
-+(instancetype)create{
++(instancetype)create {
     return [[PGSize alloc]init];
 }
 
