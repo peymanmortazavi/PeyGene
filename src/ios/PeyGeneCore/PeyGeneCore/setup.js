@@ -45,6 +45,9 @@ PGFrame.init = function(value1, value2, value3, value4) {
 PGFrame.zero = PGFrame.create();
 
 // PGColor
+PGColor.prototype.debugInfo = function () {
+    return this.red + ", " + this.green + ", " + this.blue;
+}
 
 // Common 255 scale colors.
 PGColor.white   = PGColor.fromRGBA(255, 255, 255, 255);
@@ -65,29 +68,26 @@ PGColor.olive   = PGColor.fromRGBA(128, 128, 0,   255);
 PGColor.purple  = PGColor.fromRGBA(128, 0,   128, 255);
 PGColor.teal    = PGColor.fromRGBA(0,   128, 128, 255);
 
+// Special colors
+PGColor.clear   = PGColor.fromRGBA(0,0,0,0);
+
 // PGView
-PGView.init = function (frame) {
-    if(frame instanceof PGFrame) {
-        var view = PGView.create();
-        view.layoutParameters = frame;
-        return view;
-    } else { throw new TypeError('Only PGFrame is accepted.') }
-}
+PGView.init = getDefaultConstructor(PGView);
 
 // PGButton
-PGButton.init = function (frame) {
-    if(frame instanceof PGFrame) {
-        var view = PGButton.create();
-        view.layoutParameters = frame;
-        return view;
-    } else { throw new TypeError('Only PGFrame is accepted.') }
-}
+PGButton.init = getDefaultConstructor(PGButton);
 
 // PGLabel
-PGLabel.init = function (frame) {
-    if(frame instanceof PGFrame) {
-        var view = PGLabel.create();
-        view.layoutParameters = frame;
-        return view;
-    } else { throw new TypeError('Only PGFrame is accepted.') }
+PGLabel.init = getDefaultConstructor(PGLabel);
+
+function getDefaultConstructor(type) {
+    return function (frame) {
+        if(frame instanceof PGFrame) {
+            var view = type.create();
+            view.frame = frame;
+            return view;
+        } else {
+            throw new TypeError('Invalid frame type. PGFrame is the only accepted type.');
+        }
+    };
 }

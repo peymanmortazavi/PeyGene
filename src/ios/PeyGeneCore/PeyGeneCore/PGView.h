@@ -16,7 +16,7 @@
 +(instancetype)create;
 
 @property (nonatomic) PGColor* backgroundColor;
-@property (nonatomic) PGFrame* layoutParameters;
+@property (nonatomic) PGFrame* frame;
 @property (readonly, nonatomic) PGLayer* layer;
 
 -(void)addSubview:(PGView*)view;

@@ -21,7 +21,7 @@
 
 
 #import "ViewController.h"
-#import <PeyGeneCore/PeyGeneCore.h>
+#import <PeyGeneCore/PGPage.h>
 
 @interface ViewController ()
 
@@ -49,11 +49,16 @@
     
     runtime.mainContext[@"app"] = self;
     
-    runtime.mainContext[@"loadView"] = ^(PGView* view) {
-        [self.view addSubview:view.nativeView];
-    };
+//    runtime.mainContext[@"loadView"] = ^(PGView* view) {
+//        [self.view addSubview:view.nativeView];
+//    };
+    
     [runtime.mainContext evaluateScript:[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil]];
-    [runtime.mainContext[@"done"] callWithArguments:nil];
+
+    JSValue* value = [runtime.mainContext[@"main"] callWithArguments:nil];
+    PGPage* page = [value toObjectOfClass:[PGPage class]];
+    NSLog(page == nil ? @"Page is null" : @"Page is good");
+    [self presentViewController:page.nativeViewController animated:false completion:nil];
     
 }
 

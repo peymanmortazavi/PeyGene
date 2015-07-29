@@ -15,6 +15,7 @@ CALayer* _nativeLayer;
 -(instancetype)initWithNativeLayer:(CALayer *)layer {
     if(self = [super init]) {
         _nativeLayer = layer;
+        _borderColor = [PGColor fromNativeColor:[UIColor colorWithCGColor:layer.borderColor]];
     }
     return self;
 }
@@ -40,10 +41,9 @@ CALayer* _nativeLayer;
     _nativeLayer.borderWidth = borderWidth;
 }
 
--(PGColor *)borderColor {
-    return [PGColor fromNativeColor:[UIColor colorWithCGColor:_nativeLayer.borderColor]];
-}
--(void)setBorderColor:(PGColor *)borderColor{
+@synthesize borderColor = _borderColor;
+-(void)setBorderColor:(PGColor *)borderColor {
+    _borderColor = borderColor;
     _nativeLayer.borderColor = [[borderColor toNativeColor] CGColor];
 }
 

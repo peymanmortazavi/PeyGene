@@ -24,7 +24,7 @@ UILabel* _nativeLabel;
     return self;
 }
 
--(NSString *)text{
+-(NSString *)text {
     return _nativeLabel.text;
 }
 -(void)setText:(NSString *)text {
