@@ -38,24 +38,29 @@
 
 -(void)setup {
 
-    // Register core classes.
+    // Register core classes
     self.mainContext[@"PGColor"] = [PGColor class];
     self.mainContext[@"PGSize"] = [PGSize class];
     self.mainContext[@"PGPoint"] = [PGPoint class];
     self.mainContext[@"PGFrame"] = [PGFrame class];
+    
+    // Register views.
     self.mainContext[@"PGView"] = [PGView class];
     self.mainContext[@"PGButton"] = [PGButton class];
     self.mainContext[@"PGLabel"] = [PGLabel class];
+    
+    // Register pages.
+    self.mainContext[@"PGPage"] = [PGPage class];
 
     // Register common functions.
     self.mainContext[@"console"] = [[NSMutableDictionary alloc]initWithCapacity:1];
-    self.mainContext[@"console"][@"log"] = ^(NSString* value) {
+    self.mainContext[@"console"][@"log"] = ^(JSValue* value) {
 //        NSObject* object = [value toObject];
 //        
 //        NSMutableArray* properties = [self allPropertiesOfClass:[object class]];
 //        [properties removeObjectsInArray:[NSArray arrayWithObjects:@"hash", @"superclass", @"description", @"debugDescription", nil]];
 //        NSLog([properties description]);
-        NSLog(value);
+        NSLog([value toString]);
     };
 
     // Execute setup.js

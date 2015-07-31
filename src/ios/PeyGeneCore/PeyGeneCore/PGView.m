@@ -15,7 +15,7 @@
     return [[PGView alloc] initWithNativeView:[[UIView alloc] init]];
 }
 
-UIView* _nativeView;
+@synthesize nativeView = _nativeView;
 -(UIView*)nativeView {
     return _nativeView;
 }
@@ -24,7 +24,8 @@ UIView* _nativeView;
     [self syncNativeView];
 }
 
-PGColor* _backgroundColor;
+// Background Color
+@synthesize backgroundColor = _backgroundColor;
 -(PGColor*)backgroundColor {
     return _backgroundColor;
 }
@@ -33,20 +34,21 @@ PGColor* _backgroundColor;
     self.nativeView.backgroundColor = [backgroundColor toNativeColor];
 }
 
-PGFrame* _layoutParameters;
--(PGFrame *)layoutParameters {
+// Frame
+@synthesize frame = _layoutParameters;
+-(PGFrame *)frame {
     return _layoutParameters;
 }
--(void)setLayoutParameters:(PGFrame *)layoutParameters {
+-(void)setFrame:(PGFrame *)layoutParameters {
     _layoutParameters = layoutParameters;
     self.nativeView.frame = [layoutParameters toNativeFrame];
 }
 
 -(instancetype)initWithNativeView:(UIView *)view {
-    if(self = [self init]) {
-        self.nativeView = view;
+    if(self = [super init]) {
+        _nativeView = view;
         self.backgroundColor = [PGColor fromNativeColor:self.nativeView.backgroundColor];
-        self.layoutParameters = [PGFrame fromNativeFrame:self.nativeView.frame];
+        self.frame = [PGFrame fromNativeFrame:self.nativeView.frame];
         _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
     }
     return self;
@@ -54,7 +56,7 @@ PGFrame* _layoutParameters;
 
 -(void)syncNativeView {
     self.nativeView.backgroundColor = [self.backgroundColor toNativeColor];
-    self.nativeView.frame = [self.layoutParameters toNativeFrame];
+    self.nativeView.frame = [self.frame toNativeFrame];
     _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
 }
 

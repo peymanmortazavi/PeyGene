@@ -20,8 +20,9 @@ UIButton* _nativeButton;
 
 -(instancetype)init {
     if(self = [super init]) {
-        _nativeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _nativeButton = [[UIButton alloc] init];
         [_nativeButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+        _textColor = [PGColor fromNativeColor:[_nativeButton currentTitleColor]];
         super.nativeView = _nativeButton;
     }
     return self;
@@ -34,11 +35,10 @@ UIButton* _nativeButton;
     [_nativeButton setTitle:text forState:UIControlStateNormal];
 }
 
--(PGColor *)textColor {
-    return [PGColor fromNativeColor:[_nativeButton currentTitleColor]];
-}
+@synthesize textColor = _textColor;
 -(void)setTextColor:(PGColor *)textColor {
     [_nativeButton setTitleColor:[textColor toNativeColor] forState:UIControlStateNormal];
+    _textColor = textColor;
 }
 
 -(void)buttonClicked {
