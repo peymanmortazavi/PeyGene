@@ -20,6 +20,11 @@
     if(self = [super init]) {
         _view = [[PGView alloc] initWithNativeView:viewController.view];
         _nativeViewController = viewController;
+        NSError *error;
+        BOOL result = [[self class] jr_swizzleMethod:@selector(viewWillAppear:) withMethod:@selector(xxx_viewWillAppear) error:&error];
+        if (!result || error) {
+            NSLog(@"Can't swizzle methods - %@", [error description]);
+        }
     }
     return self;
 }
