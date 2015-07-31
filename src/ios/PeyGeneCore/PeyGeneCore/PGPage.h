@@ -10,7 +10,6 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <UIKit/UIKit.h>
 #import "PGView.h"
-#import "JRSwizzle.h"
 
 @protocol PGPageExporting <NSObject, JSExport>
 
