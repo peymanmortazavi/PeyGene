@@ -81,13 +81,13 @@ PGButton.init = getDefaultConstructor(PGButton);
 PGLabel.init = getDefaultConstructor(PGLabel);
 
 function getDefaultConstructor(type) {
-    return function (frame) {
-        if(frame instanceof PGFrame) {
+    return function (layoutParameters) {
+        if(layoutParameters instanceof PGFrame) {
             var view = type.create();
-            view.frame = frame;
+            view.layoutParameters = layoutParameters;
             return view;
         } else {
-            throw new TypeError('Invalid frame type. PGFrame is the only accepted type.');
+            throw new TypeError('Invalid layoutParameters type. PGFrame is the only accepted type.');
         }
     };
 }

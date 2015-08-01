@@ -8,22 +8,24 @@
 
 #import "PGButton.h"
 
+@interface PGButton(){
+ UIButton* _nativeButton;
+}
+@end
+
 @implementation PGButton
 
-UIButton* _nativeButton;
-
-@synthesize onClick;
+@synthesize onClick = _onClick;
 
 +(instancetype)create {
     return [[PGButton alloc] init];
 }
 
 -(instancetype)init {
-    if(self = [super init]) {
-        _nativeButton = [[UIButton alloc] init];
+    _nativeButton = [[UIButton alloc] init];
+    if(self = [super initWithNativeView:_nativeButton]) {
         [_nativeButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
         _textColor = [PGColor fromNativeColor:[_nativeButton currentTitleColor]];
-        super.nativeView = _nativeButton;
     }
     return self;
 }
@@ -42,8 +44,8 @@ UIButton* _nativeButton;
 }
 
 -(void)buttonClicked {
-    if (onClick != nil) {
-        [onClick callWithArguments:[NSArray arrayWithObject:self]];
+    if (_onClick != nil) {
+        [_onClick callWithArguments:[NSArray arrayWithObject:self]];
     }
 }
 

@@ -8,18 +8,20 @@
 
 #import "PGLabel.h"
 
-@implementation PGLabel
+@interface PGLabel(){
+    UILabel* _nativeLabel;
+}
+@end
 
-UILabel* _nativeLabel;
+@implementation PGLabel
 
 +(instancetype)create {
     return [[PGLabel alloc] init];
 }
 
 -(instancetype)init {
-    if(self = [super init]) {
-        _nativeLabel = [[UILabel alloc] init];
-        super.nativeView = _nativeLabel;
+    _nativeLabel = [[UILabel alloc] init];
+    if(self = [super initWithNativeView:_nativeLabel]) {
     }
     return self;
 }
