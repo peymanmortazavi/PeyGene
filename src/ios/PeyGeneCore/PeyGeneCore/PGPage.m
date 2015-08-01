@@ -10,7 +10,7 @@
 
 @implementation PGPage
 
-@synthesize view = _view;
+@synthesize content = _content;
 
 +(instancetype)create {
     return [[PGPage alloc] initWithViewController:[[UIViewController alloc]init]];
@@ -18,10 +18,13 @@
 
 -(instancetype)initWithViewController:(UIViewController *)viewController {
     if(self = [super init]) {
-        _view = [[PGView alloc] initWithNativeView:viewController.view];
-        _nativeViewController = viewController;
+        _content = [[PGView alloc] init];
     }
     return self;
+}
+
+-(void)loadView {
+    self.view = _content.nativeView;
 }
 
 @end

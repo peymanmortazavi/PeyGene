@@ -16,15 +16,15 @@
 +(instancetype)create;
 
 @property (nonatomic) PGColor* backgroundColor;
-@property (nonatomic) PGFrame* frame;
-@property (readonly, nonatomic) PGLayer* layer;
+@property (nonatomic) PGFrame* layoutParameters;
+@property (readonly, nonatomic) PGLayer* style;
 
 -(void)addSubview:(PGView*)view;
 
 @end
 
 
-@interface PGView : NSObject<PGViewExporting>
+@interface PGView : UIView<PGViewExporting>
 
 @property (nonatomic) UIView* nativeView;
 

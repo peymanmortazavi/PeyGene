@@ -9,19 +9,38 @@
 
 @implementation PGView
 
-@synthesize layer = _layer;
+@synthesize style = _style;
 
 +(instancetype)create {
-    return [[PGView alloc] initWithNativeView:[[UIView alloc] init]];
+    return [[PGView alloc] init];
 }
+
+-(instancetype)initWithNativeView:(UIView *)view {
+    if(self = [super init]) {
+        _nativeView = view;
+        self.backgroundColor = [PGColor fromNativeColor:self.nativeView.backgroundColor];
+        self.layoutParameters = [PGFrame fromNativeFrame:self.nativeView.frame];
+        _style = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
+    }
+    return self;
+}
+
+-(instancetype)init {
+    return [self initWithNativeView:[[UIView alloc] init]];
+}
+
 
 @synthesize nativeView = _nativeView;
 -(UIView*)nativeView {
     return _nativeView;
 }
 -(void)setNativeView:(UIView *)nativeView {
+    if(_nativeView != nil) {
+        [_nativeView removeFromSuperview];
+    }
     _nativeView = nativeView;
     [self syncNativeView];
+    [super addSubview:_nativeView];
 }
 
 // Background Color
@@ -35,33 +54,27 @@
 }
 
 // Frame
-@synthesize frame = _layoutParameters;
--(PGFrame *)frame {
+@synthesize layoutParameters = _layoutParameters;
+-(PGFrame *)layoutParameters {
     return _layoutParameters;
 }
--(void)setFrame:(PGFrame *)layoutParameters {
+-(void)setLayoutParameters:(PGFrame *)layoutParameters {
     _layoutParameters = layoutParameters;
     self.nativeView.frame = [layoutParameters toNativeFrame];
 }
 
--(instancetype)initWithNativeView:(UIView *)view {
-    if(self = [super init]) {
-        _nativeView = view;
-        self.backgroundColor = [PGColor fromNativeColor:self.nativeView.backgroundColor];
-        self.frame = [PGFrame fromNativeFrame:self.nativeView.frame];
-        _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
-    }
-    return self;
-}
-
 -(void)syncNativeView {
     self.nativeView.backgroundColor = [self.backgroundColor toNativeColor];
-    self.nativeView.frame = [self.frame toNativeFrame];
-    _layer = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
+    self.nativeView.frame = [self.layoutParameters toNativeFrame];
+    _style = [[PGLayer alloc] initWithNativeLayer:self.nativeView.layer];
 }
 
 -(void)addSubview:(PGView *)view {
     [self.nativeView addSubview:view.nativeView];
+}
+
+-(void)dealloc {
+    NSLog(@"dealloc");
 }
 
 @end

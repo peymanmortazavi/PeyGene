@@ -23,7 +23,9 @@
 #import "ViewController.h"
 #import <PeyGeneCore/PGPage.h>
 
-@interface ViewController ()
+@interface ViewController (){
+    PGJavaScriptInterpreter* runtime;
+}
 
 @end
 
@@ -41,7 +43,7 @@
     
     EnvironmentInfo* environmentInfo = [EnvironmentInfo withLayoutEngineInfo:layoutEngineInfo operatingSystemName:@"iOS 8.4"];
     
-    PGJavaScriptInterpreter* runtime = [PGJavaScriptInterpreter withEnvironmentInfo:environmentInfo];
+    runtime = [PGJavaScriptInterpreter withEnvironmentInfo:environmentInfo];
     
     // Execute setup.js
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"app" withExtension:@"js"];
@@ -58,8 +60,8 @@
     JSValue* value = [runtime.mainContext[@"main"] callWithArguments:nil];
     PGPage* page = [value toObjectOfClass:[PGPage class]];
     NSLog(page == nil ? @"Page is null" : @"Page is good");
-    [self presentViewController:page.nativeViewController animated:false completion:nil];
-    
+    [self presentViewController:page animated:false completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,7 +13,7 @@
 
 @protocol PGPageExporting <NSObject, JSExport>
 
-@property (nonatomic, readonly) PGView* view;
+@property (nonatomic, readonly) PGView* content;
 
 +(instancetype)create;
 
@@ -21,9 +21,7 @@
 
 
 
-@interface PGPage : NSObject<PGPageExporting>
-
-@property (readonly, nonatomic) UIViewController* nativeViewController;
+@interface PGPage : UIViewController<PGPageExporting>
 
 -(instancetype)initWithViewController:(UIViewController*)viewController;
 

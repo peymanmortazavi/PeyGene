@@ -86,4 +86,8 @@
     return rv;
 }
 
+-(void)dealloc {
+    NSLog(@"runtime deallocated");
+}
+
 @end
